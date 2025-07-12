@@ -1,0 +1,33 @@
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.gallery-img {
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+}
+
+.scroll-btn {
+  transition: all 0.3s ease;
+}
+
+.scroll-btn:hover {
+  transform: translateY(-2px);
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #10b981;
+}

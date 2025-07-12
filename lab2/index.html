@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FinExplore</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-900 text-white font-sans">
+
+    <!-- Navbar -->
+    <nav class="bg-gray-800 p-4 flex justify-between items-center">
+        <div class="text-xl font-bold">FinExplore</div>
+        <div class="hidden md:flex space-x-4">
+            <a href="#" class="nav-link"><i class="fas fa-home"></i><span>Home</span></a>
+            <a href="#exchanges" class="nav-link"><i class="fas fa-building"></i><span>Exchanges</span></a>
+            <a href="#gallery" class="nav-link"><i class="fas fa-image"></i><span>Gallery</span></a>
+            <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i><span>Contact</span></a>
+        </div>
+        <div class="md:hidden">
+            <button id="menuBtn"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+    <div id="mobileMenu" class="md:hidden hidden bg-gray-700 p-2">
+        <a href="#" class="block py-2">Home</a>
+        <a href="#exchanges" class="block py-2">Exchanges</a>
+        <a href="#gallery" class="block py-2">Gallery</a>
+        <a href="#contact" class="block py-2">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="p-6 text-center bg-gray-900">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Discover Global Finance</h1>
+        <p class="text-lg md:text-xl mb-6">Watch our promotional video to learn more</p>
+        <video controls class="w-full max-w-3xl mx-auto rounded-lg shadow-lg">
+            <source src="finance.mp4" type="video/mp4" />
+            <track src="subtitles.vtt" kind="subtitles" srclang="en" label="English" default />
+            Your browser does not support the video tag.
+        </video>
+        <a href="#api"
+            class="scroll-btn bg-green-500 text-white px-6 py-3 mt-6 inline-block rounded-full hover:bg-green-600">Explore
+            Now</a>
+    </section>
+
+    <!-- Exchanges Section -->
+    <section id="exchanges" class="p-6 text-center">
+        <h2 class="text-3xl font-bold mb-4">Stock Exchanges Around the World</h2>
+        <div class="grid sm:grid-cols-1 md:grid-cols-3 gap-4">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="NYSE" class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1549924231-f129b911e442" alt="Tokyo Stock Exchange"
+                class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1610394213490-bf7b0a798b3a" alt="London Stock Exchange"
+                class="gallery-img">
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="p-6">
+        <h2 class="text-3xl font-bold mb-4 text-center">Gallery</h2>
+        <div class="grid sm:grid-cols-1 md:grid-cols-3 gap-4">
+            <img src="https://images.unsplash.com/photo-1559526324-593bc073d938" class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" class="gallery-img">
+        </div>
+    </section>
+
+    <!-- API Fetch -->
+    <section class="p-6" id="api">
+        <h2 class="text-3xl font-bold mb-4 text-center">Live Stock Data</h2>
+        <div id="stocks" class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+    </section>
+
+    <!-- Footer with Contact -->
+    <footer class="bg-gray-800 p-6 text-center mt-12" id="contact">
+        <h3 class="text-2xl font-bold mb-2">Contact Us</h3>
+        <form class="max-w-md mx-auto">
+            <input type="text" placeholder="Your Name" class="w-full p-2 mb-2 rounded text-black" required>
+            <input type="email" placeholder="Your Email" class="w-full p-2 mb-2 rounded text-black" required>
+            <textarea placeholder="Your Message" class="w-full p-2 mb-2 rounded text-black" rows="4"
+                required></textarea>
+            <button type="submit" class="bg-green-500 px-4 py-2 rounded hover:bg-green-600">Send Message</button>
+        </form>
+        <p class="mt-4">© 2025 FinExplore | Follow us <i class="fab fa-twitter"></i> <i class="fab fa-linkedin"></i> <i
+                class="fab fa-github"></i></p>
+        <svg class="w-8 h-8 mx-auto mt-4 text-green-400" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 17l6-6 4 4 8-8M5 21h14" />
+        </svg>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

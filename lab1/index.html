@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FinanceHub - Stock Market Insights</title>
+    <meta name="description" content="Professional finance and stock market insights platform" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>FinanceHub</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="market-analysis.html">Market Analysis</a></li>
+                    <li><a href="investment-strategies.html">Investment Strategies</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h2>Professional Stock Market Insights</h2>
+                <p>Navigate the financial markets with confidence through expert analysis and data-driven strategies.
+                </p>
+                <div class="location-info">
+                    <h3>Your Location</h3>
+                    <div id="location-display">
+                        <button id="get-location">Get My Location</button>
+                        <div id="coordinates" style="display: none;">
+                            <p>Latitude: <span id="latitude">--</span></p>
+                            <p>Longitude: <span id="longitude">--</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="market-analysis" class="content-section">
+            <div class="container">
+                <h2>Market Analysis</h2>
+                <div class="flex-container">
+                    <article class="analysis-card">
+                        <h3>Technical Analysis</h3>
+                        <p>Understanding market trends through chart patterns, indicators, and price action analysis.
+                            Technical analysis helps identify optimal entry and exit points for trades.</p>
+                        <ul>
+                            <li>Support and Resistance Levels</li>
+                            <li>Moving Averages</li>
+                            <li>RSI and MACD Indicators</li>
+                            <li>Candlestick Patterns</li>
+                        </ul>
+                    </article>
+                    <article class="analysis-card">
+                        <h3>Fundamental Analysis</h3>
+                        <p>Evaluating companies based on financial health, earnings reports, and economic indicators to
+                            determine intrinsic value and long-term investment potential.</p>
+                        <ul>
+                            <li>P/E Ratio Analysis</li>
+                            <li>Revenue Growth Trends</li>
+                            <li>Debt-to-Equity Ratios</li>
+                            <li>Market Cap Evaluation</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="investment-strategies" class="content-section">
+            <div class="container">
+                <h2>Investment Strategies</h2>
+                <div class="flex-container">
+                    <article class="strategy-card">
+                        <h3>Value Investing</h3>
+                        <p>Focus on undervalued stocks with strong fundamentals, following the principles of Warren
+                            Buffett and Benjamin Graham.</p>
+                        <div class="strategy-points">
+                            <span class="point">Long-term approach</span>
+                            <span class="point">Low risk tolerance</span>
+                            <span class="point">Dividend focus</span>
+                        </div>
+                    </article>
+                    <article class="strategy-card">
+                        <h3>Growth Investing</h3>
+                        <p>Target companies with above-average growth potential, even if they appear expensive based on
+                            traditional metrics.</p>
+                        <div class="strategy-points">
+                            <span class="point">High growth potential</span>
+                            <span class="point">Technology focus</span>
+                            <span class="point">Momentum driven</span>
+                        </div>
+                    </article>
+                    <article class="strategy-card">
+                        <h3>Day Trading</h3>
+                        <p>Short-term trading strategy involving buying and selling securities within the same trading
+                            day.</p>
+                        <div class="strategy-points">
+                            <span class="point">High frequency</span>
+                            <span class="point">Technical analysis</span>
+                            <span class="point">Risk management</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="feedback" class="feedback-section">
+            <div class="container">
+                <h2>Share Your Feedback</h2>
+                <form id="feedback-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment">Comment</label>
+                        <textarea id="comment" name="comment" rows="4" required></textarea>
+                    </div>
+                    <button type="submit">Submit Feedback</button>
+                </form>
+
+                <div id="feedback-display">
+                    <h3>Previous Feedback</h3>
+                    <div id="feedback-list"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Created by Parth | FinanceHub - Professional Market Insights</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
