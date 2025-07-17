@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoffeeHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gradient-to-b from-amber-100 to-amber-300 min-h-screen flex flex-col">
+
+    <nav class="flex items-center justify-between px-4 py-3 bg-amber-800 text-white">
+        <div class="flex items-center gap-4">
+            <span class="font-bold text-lg">CoffeeHub</span>
+        </div>
+        <div class="flex gap-6">
+            <a href="#" class="hover:text-amber-300"><i class="fas fa-home text-xl"></i></a>
+            <a href="#coffeesearch" class="hover:text-amber-300"><i class="fas fa-mug-hot text-xl"></i></a>
+            <a href="#contact" class="hover:text-amber-300"><i class="fas fa-envelope text-xl"></i></a>
+        </div>
+    </nav>
+
+    <header class="flex flex-col items-center text-center py-8 px-4">
+        <h1 class="text-3xl sm:text-4xl font-bold mb-2 text-amber-900">Welcome to CoffeeHub</h1>
+    </header>
+
+    <section class="flex flex-col gap-6 justify-center items-center px-4 mb-8">
+        <div class="w-full md:w-1/2">
+            <video controls class="rounded-lg w-full">
+                <source src="Set2 Video.mp4" type="video/mp4">
+                <track src="subtitle.vtt" kind="subtitles" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="w-full md:w-1/2 flex flex-col items-center">
+            <audio controls class="w-full mt-4">
+                <source src="Set2 Audio.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </section>
+
+    <section class="flex flex-col items-center mb-4">
+        <div id="greeting" class="text-lg font-semibold text-amber-900"></div>
+        <div id="location"
+            class="w-full max-w-xs bg-white rounded-lg shadow-md p-4 mt-4 flex items-center justify-center">
+        </div>
+        <div id="browser" class="text-xs text-gray-600"></div>
+    </section>
+
+    <section id="coffeesearch" class="flex flex-col sm:flex-row gap-2 justify-center items-center mb-4 px-4">
+        <input id="searchBox" type="text" placeholder="Search coffee by name..."
+            class="input px-3 py-2 rounded border border-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-600 transition">
+        <button id="searchBtn"
+            class="btn px-4 py-2 bg-amber-700 text-white rounded hover:bg-amber-900 transition">Search</button>
+        <select id="sortOrder"
+            class="input px-2 py-2 rounded border border-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-600 transition">
+            <option value="asc">Sort: A-Z</option>
+            <option value="desc">Sort: Z-A</option>
+        </select>
+    </section>
+
+    <main id="coffeeList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4 mb-10"></main>
+
+    <footer class="bg-amber-900 text-white mt-auto pt-10 pb-4 px-4">
+        <div class="flex flex-col items-center">
+            <section id="contact"
+                class="bg-white text-amber-900 rounded-lg shadow-lg w-full max-w-2xl mx-auto p-8 mb-6">
+                <h2 class="text-xl font-bold mb-4 text-amber-800">Share Your Coffee Love</h2>
+                <form id="feedbackForm" novalidate>
+                    <div class="mb-4">
+                        <label for="name" class="block mb-1 text-amber-700">Name</label>
+                        <input type="text" id="name" name="name"
+                            class="input w-full px-3 py-2 rounded border border-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-600 transition"
+                            required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block mb-1 text-amber-700">Email</label>
+                        <input type="email" id="email" name="email"
+                            class="input w-full px-3 py-2 rounded border border-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-600 transition"
+                            required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="favorite" class="block mb-1 text-amber-700">Favorite Coffee</label>
+                        <input type="text" id="favorite" name="favorite"
+                            class="input w-full px-3 py-2 rounded border border-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-600 transition"
+                            required>
+                    </div>
+                    <button type="submit"
+                        class="btn w-full py-2 bg-amber-700 text-white rounded hover:bg-amber-900 transition">Submit</button>
+                    <div id="formMsg" class="mt-2 text-sm"></div>
+                </form>
+            </section>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
